@@ -1,6 +1,10 @@
 <?php
 require 'vendor/autoload.php';
-require 'config/config.php';
+
+// Cargar configuración solo si no está ya cargada
+if (!defined('HOST')) {
+    require 'config/config.php';
+}
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 

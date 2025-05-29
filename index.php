@@ -1,4 +1,8 @@
 <?php
+// Configurar manejo de errores para producción
+error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+ini_set('display_errors', 0);
+
 require_once("./config/database.php");
 require_once("./core/helpers.php");
 use formacom\core\App;
