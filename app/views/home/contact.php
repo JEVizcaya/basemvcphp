@@ -191,9 +191,7 @@
                 </div>
             </div>
         </div>
-    </main>
-
-    <?php include __DIR__ . '/../partials/footer.php'; ?>
+    </main>    <?php include __DIR__ . '/../partials/footer.php'; ?>
     
     <style>
         /* Responsive para contacto */

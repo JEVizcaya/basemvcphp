@@ -2,8 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de - Mi Proyecto MVC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Acerca de - Mi Proyecto MVC</title>
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/basic.css">
 </head>
 <body>
@@ -63,9 +62,6 @@
                 <a href="<?= base_url() ?>home/services" class="btn btn-secondary">Nuestros Servicios</a>
                 <a href="<?= base_url() ?>" class="btn btn-outline">Volver al Inicio</a>
             </div>
-        </div>
-    </main>
-
-    <?php include __DIR__ . '/../partials/footer.php'; ?>
+        </div>    </main>    <?php include __DIR__ . '/../partials/footer.php'; ?>
 </body>
 </html>

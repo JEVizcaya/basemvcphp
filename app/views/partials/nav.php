@@ -9,10 +9,10 @@
             <span></span>
             <span></span>
             <span></span>
-        </button>
-          <div class="nav-links" id="navLinks">
+        </button>        <div class="nav-links" id="navLinks">
             <?php if (isset($_SESSION['user_id'])): ?>
                 <a href="<?= base_url() ?>dashboard" class="nav-link nav-link-primary">Dashboard</a>
+                <a href="<?= base_url() ?>dashboard/profile" class="nav-link nav-link-secondary">👤 Mi Perfil</a>
                 <a href="#" class="nav-link nav-link-logout" onclick="handleLogout(event)">Cerrar Sesión</a>
             <?php else: ?>
                 <a href="<?= base_url() ?>auth/login" class="nav-link nav-link-primary">Iniciar Sesión</a>

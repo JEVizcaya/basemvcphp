@@ -18,12 +18,12 @@ class App{
 
             header("Location: ".base_url());
         }
-        $this->controller = new $this->controller;
-
-         // Verificar el método
+        $this->controller = new $this->controller;         // Verificar el método
          if(isset($url[1])) {
-            if(method_exists($this->controller, $url[1])) {
-                $this->method = $url[1];
+            // Convertir kebab-case a camelCase para nombres de métodos
+            $methodName = $this->convertToCamelCase($url[1]);
+            if(method_exists($this->controller, $methodName)) {
+                $this->method = $methodName;
                 unset($url[1]);
             }
         }
@@ -66,8 +66,16 @@ class App{
             });
         } else {
             $next($request);
-        }
+        }    }
+    
+    /**
+     * Convierte kebab-case a camelCase
+     * edit-profile -> editProfile
+     */
+    private function convertToCamelCase($string) {
+        return lcfirst(str_replace('-', '', ucwords($string, '-')));
     }
+    
     private function parseUrl() {
         if(isset($_GET['url'])) {
             return explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
