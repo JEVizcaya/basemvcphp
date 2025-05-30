@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Mi Proyecto MVC</title>
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/basic.css">
-    <link rel="stylesheet" href="<?= base_url() ?>assets/css/chat.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/charla.css">
     <style>
         /* Layout específico del dashboard */
         .dashboard-layout {
@@ -65,8 +65,8 @@
     <?php include __DIR__ . '/../partials/footer.php'; ?>
     
     <!-- Chat con Google Gemini -->
-    <?php include __DIR__ . '/../partials/chat.php'; ?>
+    <?php include __DIR__ . '/../partials/charla.php'; ?>
     
-    <script src="<?= base_url() ?>assets/js/chat.js"></script>
+    <script src="<?= base_url() ?>assets/js/charla.js"></script>
 </body>
 </html>
